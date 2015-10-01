@@ -10,7 +10,7 @@ Assume that the movie theatre has c total seats and there are n servers that kee
 
 • If a reservation has been made using the name, then the client shows the message: “Failed: <name> has booked the following seats: <seat-number>,...,<seat-number>.” Here, the seat numbers are the numbers that are previously reserved for the name.
 
-• Otherwise, the specified seats are assigned to the name and the client shows the mes- sage: “The seats have been reversed for <name>: <seat-number>,...,<seat-number>.”
+• Otherwise, the specified seats are assigned to the name and the client shows the message: “The seats have been reversed for <name>: <seat-number>,...,<seat-number>.”
 
 ####(b) search <name> – returns the seat numbers that are reserved for the name. 
 If no reservation is found for the name, then the client shows the message: “Failed: no reservation is made by <name>.” 
