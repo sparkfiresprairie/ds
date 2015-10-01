@@ -4,19 +4,19 @@ The goal of this programming assignment is to learn the knowledge about the faul
 
 Assume that the movie theatre has c total seats and there are n servers that keep the current reservation of the seats. The reservation system accepts the following requests from a client:
 
-####(a) reserve <name> <count> – reserves the number, count, of seats for the name.
+####(a) reserve &ltname&gt &ltcount&gt – reserves the number, count, of seats for the name.
 
-• If the theater does not have enough seats, then the request is rejected and the client shows this message: “Failed: only <# seats left> seats left but <count> seats are requested.”
+• If the theater does not have enough seats, then the request is rejected and the client shows this message: “Failed: only &lt# seats left&gt seats left but &ltcount&gt seats are requested.”
 
-• If a reservation has been made using the name, then the client shows the message: “Failed: <name> has booked the following seats: <seat-number>,...,<seat-number>.” Here, the seat numbers are the numbers that are previously reserved for the name.
+• If a reservation has been made using the name, then the client shows the message: “Failed: &ltname&gt has booked the following seats: &ltseat-number&gt,...,&ltseat-number&gt.” Here, the seat numbers are the numbers that are previously reserved for the name.
 
-• Otherwise, the specified seats are assigned to the name and the client shows the message: “The seats have been reversed for <name>: <seat-number>,...,<seat-number>.”
+• Otherwise, the specified seats are assigned to the name and the client shows the message: “The seats have been reversed for &ltname&gt: &ltseat-number&gt,...,&ltseat-number&gt.”
 
-####(b) search <name> – returns the seat numbers that are reserved for the name. 
-If no reservation is found for the name, then the client shows the message: “Failed: no reservation is made by <name>.” 
+####(b) search &ltname&gt – returns the seat numbers that are reserved for the name. 
+If no reservation is found for the name, then the client shows the message: “Failed: no reservation is made by &ltname&gt.” 
 
-####(c) delete <name> – frees up the seats that are assigned to the name. 
-The clients shows the message: “<# seats released> seats have been released. <# seat left> seats are now available.” If no reservation is found for the name, the client shows the message: “Failed: no reservation is made by <name>.”
+####(c) delete &ltname&gt – frees up the seats that are assigned to the name. 
+The clients shows the message: “&lt# seats released&gt seats have been released. &lt# seat left&gt seats are now available.” If no reservation is found for the name, the client shows the message: “Failed: no reservation is made by &ltname&gt.”
 
 The system should behave correctly in presence of multiple concurrent clients. In particular, your system has to ensure that the reservation is identical at all servers and any update to the system is done in a mutually exclusive fashion using Lamport’s algorithm. Since Lamport’s algorithm requires the messages between servers are delivered in FIFO order, your implementation should use TCP protocol. You may assume that all servers know the IP addresses of other servers; every server has a file that holds its IP address and port number as well as those of other servers.
 
