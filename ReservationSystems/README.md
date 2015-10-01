@@ -12,9 +12,11 @@ Assume that the movie theatre has c total seats and there are n servers that kee
 
 • Otherwise, the specified seats are assigned to the name and the client shows the mes- sage: “The seats have been reversed for <name>: <seat-number>,...,<seat-number>.”
 
-####(b) search <name> – returns the seat numbers that are reserved for the name. If no reservation is found for the name, then the client shows the message: “Failed: no reservation is made by <name>.” (See the next page for more requirements.)
+####(b) search <name> – returns the seat numbers that are reserved for the name. 
+If no reservation is found for the name, then the client shows the message: “Failed: no reservation is made by <name>.” 
 
-####(c) delete <name> – frees up the seats that are assigned to the name. The clients shows the message: “<# seats released> seats have been released. <# seat left> seats are now available.” If no reservation is found for the name, the client shows the message: “Failed: no reservation is made by <name>.”
+####(c) delete <name> – frees up the seats that are assigned to the name. 
+The clients shows the message: “<# seats released> seats have been released. <# seat left> seats are now available.” If no reservation is found for the name, the client shows the message: “Failed: no reservation is made by <name>.”
 
 The system should behave correctly in presence of multiple concurrent clients. In particular, your system has to ensure that the reservation is identical at all servers and any update to the system is done in a mutually exclusive fashion using Lamport’s algorithm. Since Lamport’s algorithm requires the messages between servers are delivered in FIFO order, your implementation should use TCP protocol. You may assume that all servers know the IP addresses of other servers; every server has a file that holds its IP address and port number as well as those of other servers.
 
